@@ -54,11 +54,10 @@ for (let i = 0; i < membriTeam.length; i++) {
   card.classList.add("card");
   container.append(card);
   // -- foto
-  const img = document.createElement("div");
-  const text = document.createElement("p");
-  img.classList.add("foto");
-  text.innerHTML = `${membro.foto}`;
-  img.append(text);
+  const img = document.createElement("img");
+  img.classList.add("card-img-top");
+  img.src = `img/${membro.foto}`;
+  img.alt = `foto membro ${i + 1}`;
   card.append(img);
   // -- nome e cognome
   const nome = document.createElement("h3");
