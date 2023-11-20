@@ -52,6 +52,7 @@ for (let i = 0; i < membriTeam.length; i++) {
   // - card
   const card = document.createElement("div");
   card.classList.add("card");
+  card.classList.add("m-2");
   container.append(card);
   // -- foto
   const img = document.createElement("img");
@@ -61,12 +62,18 @@ for (let i = 0; i < membriTeam.length; i++) {
   card.append(img);
   // -- nome e cognome
   const nome = document.createElement("h3");
-  nome.classList.add("nome");
+  nome.classList.add("card-title");
+  nome.classList.add("px-2");
+  nome.classList.add("pt-3");
+  nome.classList.add("text-center");
   nome.innerHTML = `${membro.nomeCognome}`;
   card.append(nome);
   // -- ruolo
   const ruolo = document.createElement("p");
-  ruolo.classList.add("ruolo");
+  ruolo.classList.add("card-text");
+  ruolo.classList.add("px-2");
+  ruolo.classList.add("pb-3");
+  ruolo.classList.add("text-center");
   ruolo.innerHTML = `${membro.ruolo}`;
   card.append(ruolo);
 }
