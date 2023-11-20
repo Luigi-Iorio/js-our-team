@@ -33,3 +33,15 @@ const membriTeam = [
     foto: "barbara-ramos-graphic-designer.jpg",
   },
 ];
+
+// stampa in console info x ogni membro del team
+for (let i = 0; i < membriTeam.length; i++) {
+  const membro = membriTeam[i];
+  console.log(
+    `Il nome e cognome del ${i + 1}ˆ membro del team è: ${membro.nomeCognome}`
+  );
+  console.log(`Il ruolo del ${i + 1}ˆ membro del team è: ${membro.ruolo}`);
+  console.log(`L'immagine del ${i + 1}ˆ membro del team è: ${membro.foto}`);
+  // divisore
+  console.log("-----------");
+}
