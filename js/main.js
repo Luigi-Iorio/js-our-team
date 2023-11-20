@@ -34,6 +34,9 @@ const membriTeam = [
   },
 ];
 
+// container nel dom
+const container = document.querySelector(".container");
+
 // stampa in console info x ogni membro del team
 for (let i = 0; i < membriTeam.length; i++) {
   const membro = membriTeam[i];
@@ -44,4 +47,27 @@ for (let i = 0; i < membriTeam.length; i++) {
   console.log(`L'immagine del ${i + 1}ˆ membro del team è: ${membro.foto}`);
   // divisore
   console.log("-----------");
+
+  // elementi nel dom
+  // - card
+  const card = document.createElement("div");
+  card.classList.add("card");
+  container.append(card);
+  // -- foto
+  const img = document.createElement("div");
+  const text = document.createElement("p");
+  img.classList.add("foto");
+  text.innerHTML = `${membro.foto}`;
+  img.append(text);
+  card.append(img);
+  // -- nome e cognome
+  const nome = document.createElement("h3");
+  nome.classList.add("nome");
+  nome.innerHTML = `${membro.nomeCognome}`;
+  card.append(nome);
+  // -- ruolo
+  const ruolo = document.createElement("p");
+  ruolo.classList.add("ruolo");
+  ruolo.innerHTML = `${membro.ruolo}`;
+  card.append(ruolo);
 }
